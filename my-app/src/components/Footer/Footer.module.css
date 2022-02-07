@@ -1,0 +1,53 @@
+.container__main {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-two);
+  position: fixed;
+  bottom: 0;
+}
+
+.container__content {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mideline {
+  width: 100%;
+  background-color: var(--color-tree);
+  height: 3px;
+  border-radius: 50%;
+}
+
+.container_icon {
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+
+.container_icon:hover {
+  transform: scale(1.3);
+}
+
+.container__derechos {
+  color: var(--color-one);
+  margin-top: 10px;
+}
+
+.container__redes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container__redes_content {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}

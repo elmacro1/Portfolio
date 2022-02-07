@@ -1,0 +1,14 @@
+:root {
+  --color-one: #3d4490;
+  --color-two: #5994ff;
+  --color-tree: #83c3ff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

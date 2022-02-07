@@ -1,0 +1,76 @@
+.container__main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+
+.text {
+  color: var(--color-tree);
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 35ch;
+  animation: typing 5s steps(35), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+  font-size: 45px;
+}
+
+.container__logos {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: show;
+  animation-duration: 6.5s;
+  animation-fill-mode: forwards;
+}
+
+.logos__lenguajes {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.logos__lenguajes:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.3);
+  border-radius: 10px;
+  filter: grayscale(0%) drop-shadow(0px 0px 10px var(--color-tree));
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
