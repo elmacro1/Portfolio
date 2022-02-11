@@ -6,9 +6,9 @@ export default function Contact() {
       <div className={style.container__content}>
         <h2>Contacta conmigo!</h2>
         <form
-          // onSubmit={(e) => e.preventDefault()}
           action="https://formsubmit.co/elmacro11@gmail.com"
           method="POST"
+          onSubmit={(e) => e.preventDefault()}
         >
           <input type="text" name="name" placeholder="Ingresa tu nombre" />
           <input type="email" name="email" placeholder="Ingresa tu email" />
