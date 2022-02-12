@@ -5,13 +5,33 @@ import {
   renderContact,
   renderHome,
   renderProjects,
+  changeLenguage,
 } from "../../actions/index";
 export default function Navigation() {
   let dispatch = useDispatch();
   let componentRender = useSelector((state) => state.componentRender);
+  let lenguage = useSelector((state) => state.lenguage);
 
   return (
     <nav className={style.nav__container__main}>
+      <div className={style.container__changeLenguage}>
+        <span
+          onClick={() => dispatch(changeLenguage("spanish"))}
+          className={`${style.spanishButton} ${
+            lenguage === "spanish" && style.selected
+          }`}
+        >
+          {lenguage === "english" ? "Spanish" : "Español"}
+        </span>
+        <span
+          onClick={() => dispatch(changeLenguage("english"))}
+          className={`${style.englishButton} ${
+            lenguage === "english" && style.selected
+          }`}
+        >
+          {lenguage === "english" ? "English" : "Ingles"}
+        </span>
+      </div>
       <ul className={style.nav__container__ul}>
         <li
           onClick={() => {
@@ -21,7 +41,7 @@ export default function Navigation() {
             componentRender === "home" && style.nav__container__ul_li_selected
           }
         >
-          Home
+          {lenguage === "english" ? "Home" : "Inicio"}
         </li>
         <li
           onClick={() => {
@@ -31,7 +51,7 @@ export default function Navigation() {
             componentRender === "about" && style.nav__container__ul_li_selected
           }
         >
-          About
+          {lenguage === "english" ? "About me" : "Sobre mí"}
         </li>
 
         <li
@@ -43,7 +63,7 @@ export default function Navigation() {
             style.nav__container__ul_li_selected
           }
         >
-          Projects
+          {lenguage === "english" ? "Projects" : "Proyectos"}
         </li>
         <li
           onClick={() => {
@@ -54,7 +74,7 @@ export default function Navigation() {
             style.nav__container__ul_li_selected
           }
         >
-          Contact
+          {lenguage === "english" ? "Contact" : "Contacto"}
         </li>
       </ul>
     </nav>

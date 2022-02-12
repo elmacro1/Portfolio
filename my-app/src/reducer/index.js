@@ -4,10 +4,12 @@ import {
   RENDER_HOME,
   RENDER_PROJECTS,
   RENDER_SKILLS,
+  CHANGE_LENGUAGE,
 } from "../actions/constantes";
 
 let initialStore = {
   componentRender: "home",
+  lenguage: "english",
 };
 
 export default function rootReducer(state = initialStore, action) {
@@ -36,6 +38,11 @@ export default function rootReducer(state = initialStore, action) {
       return {
         ...state,
         componentRender: "skills",
+      };
+    case CHANGE_LENGUAGE:
+      return {
+        ...state,
+        lenguage: action.payload,
       };
 
     default:

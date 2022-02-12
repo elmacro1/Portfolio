@@ -4,6 +4,7 @@ import {
   RENDER_HOME,
   RENDER_PROJECTS,
   RENDER_SKILLS,
+  CHANGE_LENGUAGE,
 } from "./constantes";
 
 export function renderHome() {
@@ -33,5 +34,12 @@ export function renderProjects() {
 export function renderSkills() {
   return {
     type: RENDER_SKILLS,
+  };
+}
+
+export function changeLenguage(payload) {
+  return {
+    type: CHANGE_LENGUAGE,
+    payload,
   };
 }
